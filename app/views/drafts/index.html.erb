@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Drafts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Draft</th>
+      <th>Draft name</th>
+      <th>Gender</th>
+      <th>Expected price</th>
+      <th>Explanation</th>
+      <th>Product category</th>
+      <th>Bookmark count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drafts.each do |draft| %>
+      <tr>
+        <td><%= draft.user_id %></td>
+        <td><%= draft.draft_id %></td>
+        <td><%= draft.draft_name %></td>
+        <td><%= draft.gender %></td>
+        <td><%= draft.expected_price %></td>
+        <td><%= draft.explanation %></td>
+        <td><%= draft.product_category %></td>
+        <td><%= draft.bookmark_count %></td>
+        <td><%= link_to 'Show', draft %></td>
+        <td><%= link_to 'Edit', edit_draft_path(draft) %></td>
+        <td><%= link_to 'Destroy', draft, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Draft', new_draft_path %>

@@ -1,0 +1,2 @@
+class DraftPicture < ApplicationRecord
+end

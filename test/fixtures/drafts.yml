@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  draft_id: 1
+  draft_name: MyString
+  gender: 1
+  expected_price: 1
+  explanation: MyString
+  product_category: 1
+  bookmark_count: 1
+
+two:
+  user_id: 1
+  draft_id: 1
+  draft_name: MyString
+  gender: 1
+  expected_price: 1
+  explanation: MyString
+  product_category: 1
+  bookmark_count: 1
