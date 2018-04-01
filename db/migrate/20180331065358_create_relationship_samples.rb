@@ -6,8 +6,8 @@ class CreateRelationshipSamples < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-    add_index :relationships, :sample_id
-    add_index :relationships, :sample_picture_id
-    add_index :relationships, [:sample_id, :sample_picture_id], unique: true
+    add_index :relationship_samples, :sample_id
+    add_index :relationship_samples, :sample_picture_id
+    add_index :relationship_samples, [:sample_id, :sample_picture_id], unique: true
   end
 end

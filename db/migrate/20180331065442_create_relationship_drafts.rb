@@ -6,8 +6,8 @@ class CreateRelationshipDrafts < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
-        add_index :relationships, :draft_id
-    add_index :relationships, :draft_picture_id
-    add_index :relationships, [:draft_id, :draft_picture_id], unique: true
+    add_index :relationship_drafts, :draft_id
+    add_index :relationship_drafts, :draft_picture_id
+    add_index :relationship_drafts, [:draft_id, :draft_picture_id], unique: true
   end
 end

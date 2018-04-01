@@ -1,0 +1,2 @@
+class DraftSampleRelationship < ApplicationRecord
+end
