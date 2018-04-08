@@ -10,23 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180401015624) do
+ActiveRecord::Schema.define(version: 20180331065358) do
 
   create_table "draft_pictures", force: :cascade do |t|
     t.integer "draft_picture_id"
     t.string "draft_picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "draft_sample_relationships", force: :cascade do |t|
-    t.integer "draft_id"
-    t.integer "sample_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["draft_id", "sample_id"], name: "index_draft_sample_relationships_on_draft_id_and_sample_id", unique: true
-    t.index ["draft_id"], name: "index_draft_sample_relationships_on_draft_id"
-    t.index ["sample_id"], name: "index_draft_sample_relationships_on_sample_id"
   end
 
   create_table "drafts", force: :cascade do |t|
@@ -40,16 +30,6 @@ ActiveRecord::Schema.define(version: 20180401015624) do
     t.integer "bookmark_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "relationship_drafts", force: :cascade do |t|
-    t.integer "draft_id"
-    t.integer "draft_picture_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["draft_id", "draft_picture_id"], name: "index_relationship_drafts_on_draft_id_and_draft_picture_id", unique: true
-    t.index ["draft_id"], name: "index_relationship_drafts_on_draft_id"
-    t.index ["draft_picture_id"], name: "index_relationship_drafts_on_draft_picture_id"
   end
 
   create_table "relationship_samples", force: :cascade do |t|
